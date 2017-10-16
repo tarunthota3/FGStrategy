@@ -23,11 +23,15 @@ class Cards extends React.Component {
     render() {
         return (
             <div>
-              <Image src={Cookie.load('profilepicture')}
-                                      className='profileImageSize' alt='img' avatar style={{width:'5%',height:'5%'}}/>
-              Welcome <b>{Cookie.load('username')}</b>
-                You are logged in via <b>{Cookie.load('authType')}</b>. Your emailID is <b>{Cookie.load('email')}</b>.
-              <Button onClick={this.logoutCall.bind(this)}>Logout</Button>
+              <Image src={Cookie.load('profilepicture')} alt='img' avatar style={{width:'10%',height:'10%',marginLeft:'50%',marginTop:'-4%'}}/>
+              <p style={{marginLeft:'2%',fontSize:'140%',marginTop:'2%'}}>Welcome <b>{Cookie.load('username')}</b></p>
+              <div style={{float:'right',marginRight:'2%',marginTop:'-3%'}}>
+
+                <Button inverted color='grey' style={{color:'black'}} onClick={this.logoutCall.bind(this)}>Logout</Button>
+              </div>
+
+              <div style={{marginLeft:'10%',fontSize:'120%'}}>You are logged in via <b>{Cookie.load('authType')}</b>. Your emailID is <b>{Cookie.load('email')}</b>.</div>
+
             </div>
         );
     }
